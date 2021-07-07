@@ -1,0 +1,283 @@
+@charset "UTF-8";
+
+// --------------------------------
+// コンテンツ
+// --------------------------------
+
+.page {
+  overflow: hidden;
+  background: #fff;
+
+  @include mq(pc) {
+    min-width: 980px;
+  }
+
+  &__inner {
+    margin: auto;
+
+    @include mq(pc) {
+      min-width: 980px;
+      width: 980px;
+    }
+
+    // @media screen and (min-width:769px) and (max-width:980px) {
+    // 	padding: 0 20px;
+    // }
+
+    @include mq {
+      width: vw(688);
+      margin: 0 5.208333333333334vw;
+    }
+  }
+
+
+
+  .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__title {
+      display: none;
+    }
+
+    &__list {
+      width: auto;
+
+      @include mq {
+        width: 100vw;
+      }
+    }
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__title {
+      display: none;
+    }
+
+    &__list {
+      width: auto;
+    }
+
+    &__item {
+      cursor: pointer;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+
+  .barcode {
+    display: flex;
+    width: 750px;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+
+    @include mq {
+      width: 95vw;
+      margin: 5.21vw auto;
+    }
+
+    &__title {
+      display: none;
+    }
+
+    &__desc {
+      margin-left: 20px;
+
+      @include mq {
+        margin-left: 2vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &-title {
+        margin-top: -4px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #000;
+
+        @include mq {
+          margin-top: 0;
+          font-size: 4vw;
+        }
+      }
+
+      &-sub {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #909090;
+
+        @include mq {
+          margin-top: 1vw;
+          font-size: 2.60vw;
+
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &__figure {
+      img {
+        width: 100px;
+      }
+
+      @include mq {
+        img {
+          width: 30vw;
+        }
+      }
+    }
+  }
+
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1%;
+    cursor: pointer;
+
+    @include mq {
+      width: 100vw;
+      margin-bottom: 5vw;
+    }
+
+    &__title {
+      font-size: 16px;
+      font-weight: bold;
+      width: 500px;
+      text-align: center;
+
+      @include mq {
+        width: 100vw;
+        font-size: 4vw;
+      }
+
+
+      &::before {
+        font-family: "Font Awesome 5 Free";
+        content: '\f093';
+        font-size: 16px;
+        margin-right: 1%;
+
+        @include mq {
+          font-size: 4vw;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .page {
+
+
+    &__inner {
+
+      width: 100vw;
+      margin: 0 5.208333333333334vw;
+    }
+
+
+
+    .banner {
+
+      &__list {
+        width: 100vw;
+      }
+
+      &__figure {
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .nav {
+
+
+      &__list {
+        width: 100%;
+      }
+
+      &__figure {
+        img {
+          width: 100%;
+        }
+      }
+
+    }
+
+    .barcode {
+
+      width: 95vw;
+      margin: 5.21vw auto;
+
+
+      &__desc {
+
+
+        margin-left: 2vw;
+
+
+        &-title {
+
+          margin-top: 0;
+          font-size: 4vw;
+          line-height: 6vw;
+
+        }
+
+        &-sub {
+
+          margin-top: 1vw;
+          font-size: 2.60vw;
+          line-height: 4vw;
+
+          br {
+            display: none;
+          }
+        }
+      }
+
+      &__figure {
+        width: 19.01vw;
+        height: 19.01vw;
+
+        img {
+          width: 19.01vw;
+          height: 19.01vw;
+        }
+      }
+    }
+
+    .social {
+
+      width: 100vw;
+      margin-bottom: 5vw;
+
+      &__title {
+
+        width: 100vw;
+        font-size: 4vw;
+
+        &::before {
+          font-size: 4vw;
+        }
+      }
+    }
+  }
+}
